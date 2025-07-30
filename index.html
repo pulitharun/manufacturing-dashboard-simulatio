@@ -5,28 +5,26 @@
   <title>Manufacturing Dashboard</title>
   <style>
     body {
-      color: #ffffff;
-      background-color: #003366;
+      background-color: #002B36;
+      color: #FFFFFF;
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      padding: 20px;
+      padding: 30px;
     }
 
     h1 {
-      font-size: 300%;
-      font-weight: normal;
-      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2.5em;
     }
 
-    .dashboard-section {
-      background-color: #005599;
-      border-radius: 8px;
+    .section {
+      background-color: #004B6B;
       padding: 20px;
       margin-bottom: 20px;
+      border-radius: 10px;
     }
 
-    h2 {
-      font-size: 150%;
+    .section h2 {
+      font-size: 1.5em;
       margin-bottom: 10px;
     }
 
@@ -36,56 +34,46 @@
     }
 
     li {
-      margin-bottom: 6px;
+      padding: 5px 0;
     }
 
-    .status-running {
-      color: #00ff88;
+    .status-ok {
+      color: #00FF88;
     }
 
-    .status-stopped {
-      color: #ff4444;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #cccccc;
+    .status-fail {
+      color: #FF5555;
     }
   </style>
 </head>
 <body>
-  <h1 align="center">Manufacturing Dashboard</h1>
+  <h1>Manufacturing Dashboard</h1>
 
-  <div class="dashboard-section">
+  <div class="section">
     <h2>Machine Status</h2>
     <ul>
-      <li>Machine A: <span class="status-running">Running</span></li>
-      <li>Machine B: <span class="status-stopped">Stopped</span></li>
-      <li>Machine C: <span class="status-running">Running</span></li>
+      <li>Machine A: <span class="status-ok">Running</span></li>
+      <li>Machine B: <span class="status-fail">Stopped</span></li>
+      <li>Machine C: <span class="status-ok">Running</span></li>
     </ul>
   </div>
 
-  <div class="dashboard-section">
+  <div class="section">
     <h2>Active Orders</h2>
     <ul>
-      <li>Order ID: #ORD1023</li>
-      <li>Order ID: #ORD1024</li>
-      <li>Order ID: #ORD1025</li>
+      <li>Order ID: #ORD1001</li>
+      <li>Order ID: #ORD1002</li>
+      <li>Order ID: #ORD1003</li>
     </ul>
   </div>
 
-  <div class="dashboard-section">
-    <h2>Production Line Stats</h2>
+  <div class="section">
+    <h2>Production Line Output</h2>
     <ul>
-      <li>Line 1 Output: 120 units/hour</li>
-      <li>Line 2 Output: 95 units/hour</li>
-      <li>Line 3 Output: 110 units/hour</li>
+      <li>Line 1: 120 units/hour</li>
+      <li>Line 2: 110 units/hour</li>
+      <li>Line 3: 95 units/hour</li>
     </ul>
-  </div>
-
-  <div class="footer" align="center">
-    <p>Deployment powered by AWS CodePipeline & CodeDeploy | Demo by Rakesh Alupula</p>
   </div>
 </body>
 </html>
