@@ -2,35 +2,90 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Sample Deployment</title>
+  <title>Manufacturing Dashboard</title>
   <style>
     body {
       color: #ffffff;
-      background-color: #007f3f;
+      background-color: #003366;
       font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 16px;
+      padding: 20px;
     }
-    
+
     h1 {
-      font-size: 500%;
+      font-size: 300%;
       font-weight: normal;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
-    
+
+    .dashboard-section {
+      background-color: #005599;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
     h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
+      font-size: 150%;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .status-running {
+      color: #00ff88;
+    }
+
+    .status-stopped {
+      color: #ff4444;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #cccccc;
     }
   </style>
 </head>
 <body>
-  <div align="center">
-    <h1>Congratulations!</h1>
-    <h2>You have successfully created a pipeline that retrieved this source application from an Amazon S3 bucket and deployed it 
-	to three Amazon EC2 instances using AWS CodeDeploy.</h2>
-    <p>For next steps, read the AWS CodePipeline Documentation.</p>
+  <h1 align="center">Manufacturing Dashboard</h1>
+
+  <div class="dashboard-section">
+    <h2>Machine Status</h2>
+    <ul>
+      <li>Machine A: <span class="status-running">Running</span></li>
+      <li>Machine B: <span class="status-stopped">Stopped</span></li>
+      <li>Machine C: <span class="status-running">Running</span></li>
+    </ul>
+  </div>
+
+  <div class="dashboard-section">
+    <h2>Active Orders</h2>
+    <ul>
+      <li>Order ID: #ORD1023</li>
+      <li>Order ID: #ORD1024</li>
+      <li>Order ID: #ORD1025</li>
+    </ul>
+  </div>
+
+  <div class="dashboard-section">
+    <h2>Production Line Stats</h2>
+    <ul>
+      <li>Line 1 Output: 120 units/hour</li>
+      <li>Line 2 Output: 95 units/hour</li>
+      <li>Line 3 Output: 110 units/hour</li>
+    </ul>
+  </div>
+
+  <div class="footer" align="center">
+    <p>Deployment powered by AWS CodePipeline & CodeDeploy | Demo by Rakesh Alupula</p>
   </div>
 </body>
 </html>
-
