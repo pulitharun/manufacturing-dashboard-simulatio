@@ -1,16 +1,26 @@
-version: 0.2
+version: 0.2  # Buildspec format version
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 14
+  install:      # Install dependencies
     commands:
       - echo Installing dependencies...
       - npm install
-  build:
-    commands:
-      - echo Build complete.
 
-artifacts:
+  pre_build:    # Tasks before build
+    commands:
+      - echo Running pre-build checks...
+
+  build:        # Actual build process
+    commands:
+      - echo Building the project...
+      - npm run build
+
+  post_build:   # Actions after build
+    commands:
+      - echo Build completed on `date`
+
+artifacts:      # Output files after build
   files:
-    - '**/*'
+    - '**/*'    # Include all files (or specify files like build/**)
+
+  base-directory: .
