@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "=== Starting Node.js server ==="
-cd /home/ec2-user/app
-nohup npm start > /dev/null 2>&1 &
+echo "Starting Manufacturing Dashboard service..."
+sudo systemctl daemon-reload
+sudo systemctl enable manufacturing-dashboard.service
+sudo systemctl restart manufacturing-dashboard.service

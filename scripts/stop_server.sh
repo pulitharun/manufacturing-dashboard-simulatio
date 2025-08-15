@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-echo "=== Stopping any running Node process ==="
-pkill node || true
+echo "Stopping Manufacturing Dashboard service..."
+sudo systemctl stop manufacturing-dashboard.service || true
