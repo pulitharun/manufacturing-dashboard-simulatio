@@ -1,4 +1,11 @@
 {
+  "name": "manufacturing-dashboard",
+  "version": "1.0.0",
+  "description": "Manufacturing dashboard (Node.js) deployed via CodePipeline/CodeDeploy",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "socket.io": "^4.8.1"
   }
