@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
-# Find any running Node process and stop it
-pkill node
+echo "=== Stopping any running Node process ==="
+pkill node || true

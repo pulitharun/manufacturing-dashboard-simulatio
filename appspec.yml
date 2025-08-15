@@ -3,16 +3,24 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/app
+
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
       runas: ec2-user
+
   AfterInstall:
     - location: scripts/install_dependencies.sh
       runas: ec2-user
+
   ApplicationStart:
     - location: scripts/start_server.sh
       runas: ec2-user
+
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      runas: ec2-user
+
   ValidateService:
     - location: scripts/validate_service.sh
       runas: ec2-user

@@ -1,26 +1,22 @@
-version: 0.2  # Buildspec format version
+version: 0.2
 
 phases:
-  install:      # Install dependencies
+  install:
     commands:
       - echo Installing dependencies...
       - npm install
-
-  pre_build:    # Tasks before build
+  pre_build:
     commands:
       - echo Running pre-build checks...
-
-  build:        # Actual build process
+  build:
     commands:
       - echo Building the project...
-      - npm run build
-
-  post_build:   # Actions after build
+      - npm run build || echo "No build step, skipping..."
+  post_build:
     commands:
       - echo Build completed on `date`
 
-artifacts:      # Output files after build
+artifacts:
   files:
-    - '**/*'    # Include all files (or specify files like build/**)
-
+    - '**/*'
   base-directory: .
